@@ -27,6 +27,7 @@ const Discover = () => {
                         i={i} 
                     />
                 ))}
+                {/* need to grap from api for it to work */}
             </div>
         </div>
     );
