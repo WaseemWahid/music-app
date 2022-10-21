@@ -1,4 +1,4 @@
-// this will be the file to ffetch data from the Shazam core API
+// this will be the file to fetch data from the Shazam core API
 
 // rapid API need key and to fetch from data try with post man first 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
@@ -15,9 +15,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
         }),
         endpoints: (builder) => ({
             getTopCharts: builder.query({ query: () => '/charts/world'}),
+            getSongDetails: builder.query({ query: ({ songid } ) => `/track/details?track_id=${songid}` }),
         }),
     });
 
     export const { 
         useGetTopChartsQuery,
+        useGetSongDetailsQuery,
     } = shazamCoreApi
