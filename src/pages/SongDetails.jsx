@@ -25,7 +25,7 @@ const SongDetails = () => {
                         songData?.section.text.map((line, i ) => (
                             <p>{ line }</p>
                         )) :
-                        <p>SORRY, NO LYRICS FOUND</p> }
+                        <p>Sorry, No lyrics found!</p> }
                 </div>
             </div>
         </div>
